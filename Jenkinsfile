@@ -52,6 +52,7 @@ pipeline{
 	       echo "Pipeline build has failed"
 	}
         cleanup{
+	    echo "Running a cleanup"
             sh 'rm -rf content-pipelines-cje-labs'
         }
     }
