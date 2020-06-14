@@ -14,7 +14,7 @@ pipeline{
    stages{
         stage('InstallDependencies'){
             steps{
-                sh 'yum -y install python3 python3-pip zlib-devel gcc git pip3'
+                sh 'yum -y install python3 python3-pip zlib-devel gcc git pip'
             }
         }
         stage('CloneRepository'){
