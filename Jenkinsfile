@@ -22,12 +22,12 @@ pipeline{
                 sh 'git clone https://github.com/linuxacademy/content-pipelines-cje-labs.git'
             }
         }
-		stage('AddDogClassRequirements'){
+	stage('AddDogClassRequirements'){
             steps{
                 sh 'pip install -r content-pipelines-cje-labs/lab3_lab4/dog_pics_downloader/requirements.txt'
             }
         }
-		stage('ExecuteDogClassScript'){
+	stage('ExecuteDogClassScript'){
             steps{
                 sh 'python content-pipelines-cje-labs/lab3_lab4/dog_pics_downloader/dog_pic_get_class.py'
             }
@@ -49,7 +49,7 @@ pipeline{
 	    echo "Pipeline has been successfully built"
         }
 	failure {
-	       echo "Build Failed Again"
+	       echo "Pipeline build has failed"
 	}
         cleanup{
             sh 'rm -rf content-pipelines-cje-labs'
