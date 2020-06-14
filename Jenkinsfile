@@ -24,7 +24,7 @@ pipeline{
         }
 	stage('AddDogClassRequirements'){
             steps{
-                sh 'pip install -r content-pipelines-cje-labs/lab3_lab4/dog_pics_downloader/requirements.txt'
+                sh 'pip3 install -r content-pipelines-cje-labs/lab3_lab4/dog_pics_downloader/requirements.txt'
             }
         }
 	stage('ExecuteDogClassScript'){
