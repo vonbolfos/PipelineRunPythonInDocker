@@ -4,7 +4,7 @@ import requests
 import shutil
 
 class DogPicsDownloader:
-    def __init__(self,*,pics_count,https=True):
+    def __init__(self,pics_count,https=True):
         self.pics_count = str(pics_count)
         self.https = str(https)
         if int(self.pics_count) > 5:
